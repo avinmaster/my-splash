@@ -5,5 +5,5 @@ Installation:
 ```
 composer i
 npm i
-npm run serve
+npm run dev
 ```
