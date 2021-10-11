@@ -133,4 +133,14 @@ class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
     {
         return $this->hasMany(Comment::class);
     }
+
+    /**
+     * User's published follows
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function follows()
+    {
+        return $this->hasMany(Follow::class);
+    }
 }
