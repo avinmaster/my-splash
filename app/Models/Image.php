@@ -22,4 +22,14 @@ class Image extends Model
     {
         return $this->hasMany(Comment::class);
     }
+
+    /**
+     * Tags
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
 }
