@@ -1,5 +1,5 @@
 # my-splash
-Alternative for unsplash.com.
+Alternative to unsplash.com.
 
 Installation:
 ```
