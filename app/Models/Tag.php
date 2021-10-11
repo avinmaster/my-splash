@@ -10,7 +10,7 @@ class Tag extends Model
     use HasFactory;
 
     /**
-     * Tags
+     * Tag's images
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */

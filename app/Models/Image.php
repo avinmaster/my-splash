@@ -13,18 +13,28 @@ class Image extends Model
 
     protected $fillable = [];
 
+    /**
+     * Image published user
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
+    /**
+     * Image comments
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\hasMany
+     */
     public function comments()
     {
         return $this->hasMany(Comment::class);
     }
 
     /**
-     * Tags
+     * Image tags
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
