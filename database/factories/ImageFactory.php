@@ -22,7 +22,8 @@ class ImageFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->words(),
+            'url' => 'http://my-splash.io/data/image-'.$this->faker->numberBetween(1, Image::count()),
         ];
     }
 }
