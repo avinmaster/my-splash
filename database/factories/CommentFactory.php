@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Comment;
+use App\Models\Image;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CommentFactory extends Factory
@@ -22,7 +23,8 @@ class CommentFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'body' => $this->faker->words(5),
+            'image_id' => $this->faker->numberBetween(Image::count()),
         ];
     }
 }
