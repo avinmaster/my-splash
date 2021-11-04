@@ -89,14 +89,14 @@ export default {
   methods: {
     async register () {
       // Register the user.
-      const { data } = await this.form.post('/api/register')
+      const { data } = await this.form.post('/register')
 
       // Must verify email fist.
       if (data.status) {
         this.mustVerifyEmail = true
       } else {
         // Log in the user.
-        const { data: { token } } = await this.form.post('/api/login')
+        const { data: { token } } = await this.form.post('/login')
 
         // Save the token.
         this.$store.dispatch('auth/saveToken', { token })

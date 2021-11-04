@@ -53,7 +53,7 @@ export default {
 
   methods: {
     async send () {
-      const { data } = await this.form.post('/api/email/resend')
+      const { data } = await this.form.post('/email/resend')
 
       this.status = data.status
 

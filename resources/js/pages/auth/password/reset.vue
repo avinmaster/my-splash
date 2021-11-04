@@ -73,7 +73,7 @@ export default {
 
   methods: {
     async reset () {
-      const { data } = await this.form.post('/api/password/reset')
+      const { data } = await this.form.post('/password/reset')
 
       this.status = data.status
 
